@@ -1,0 +1,269 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CStube</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <!-- <h1 class="text-5xl text-orange-600 px-6">Hello world</h1> -->
+
+    <!-- color template -> #000000 and #ff6161 -->
+
+    <!-- navbar -->
+    <nav class="sticky top-0 z-50">
+        <!-- flex container -->
+        <main class="relative container mx-auto mb-8 p-6">
+            <div class="flex justify-between items-center">
+                <!-- logo -->
+                <div class="pt-2">
+                    <img class="logo" src="img/logo.svg" alt="">
+                </div>
+                <!-- menu items  -->
+                <div class="menu hidden font-semibold md:flex space-x-6">
+                    <a href="#" class=" hover:text-brightRed">Home</a>
+                    <a href="#features" class=" hover:text-brightRed">Features</a>
+                    <a href="#team" class=" hover:text-brightRed">Our Team</a>
+                    <a href="#" class=" hover:text-brightRed">Pricing</a>
+                    <a href="#" class=" hover:text-brightRed">Contact</a>
+                </div>
+                <!-- buttons  -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="#" class="login bg-brightRed font-bold text-white px-4 py-2 rounded-md hover:bg-red-400">Login</a>
+                    <a href="#" class="signup bg-black text-white font-bold px-4 py-2 rounded-md hover:bg-gray-500">Sign up</a>
+                </div>
+                <!-- hamburger menu -->
+                <div class="block hamburger md:hidden focus:outline-none" id="menu-btn">
+                    <img src="img/menu.svg" alt="">
+                </div>
+            </div>
+                <!-- mobile menu  -->
+                <div class="md:hidden">
+                    <div id="menu" class="absolute flex-col flex hidden items-center py-8 mt-10 self-end space-y-6 font-bold bg-black opacity-75 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                        <a href="#" class="text-white hover:text-brightRed">Home</a>
+                        <a href="#features" class="text-white hover:text-brightRed">Features</a>
+                        <a href="#team" class="text-white hover:text-brightRed">Our Team</a>
+                        <a href="#" class="text-white hover:text-brightRed">Pricing</a>
+                        <a href="#" class="text-white hover:text-brightRed">Contact</a>
+                    </div>
+                </div>
+        </main>
+    </nav>
+
+    <!-- script to change navbar backgroud on scroll -->
+    <script>
+        const nav = document.querySelector('.sticky');
+        const menu = document.querySelector('.menu');
+        const signup = document.querySelector('.signup');
+        window.onscroll = () => {
+            if (window.pageYOffset > 0) {
+                nav.classList.add('bg-black');
+                nav.classList.add('opacity-75');
+                nav.classList.remove('bg-transparent');
+                menu.classList.add('text-white');
+                signup.classList.add('bg-white');
+                signup.classList.add('text-black');
+                signup.classList.remove('bg-black');
+                signup.classList.remove('text-white');
+                document.querySelector(".logo").src="img/logo-white.svg";
+            } 
+            else {
+                nav.classList.add('bg-transparent');
+                nav.classList.remove('bg-black');
+                nav.classList.remove('opacity-75');
+                menu.classList.remove('text-white');
+                signup.classList.add('bg-black');
+                signup.classList.add('text-white');
+                signup.classList.remove('bg-white');
+                signup.classList.remove('text-black');
+                document.querySelector(".logo").src="img/logo.svg";
+            }
+        };
+    </script>
+
+    <!-- hero section-->
+    <section id="hero" class="mt-8">
+        <div class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto space-y-0">
+            <!-- left item  tagline-->
+            <div class="flex flex-col mx-14 mb-32 space-y-14 md:w-1/2">
+                <h1 class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">
+                    Make your Learning Reliable & Affordable.
+                </h1>
+                <p class="max-w-sm font-semibold text-lg text-center text-gray-700 md:text-left">
+                    We bring you the best content available right to your screens from the free world of Youtube. So you don't need to worry paying to some random platforms.
+                </p>
+                <div class="flex justify-center md:justify-start">
+                <a href="#" class="p-3 px-6 pt-2 font-bold text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">
+                    Get Started
+                </a>
+            </div>
+            <!-- right item  image-->
+            </div class="md:w-1/2">
+                <img src="img/coding.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- features section -->
+    <section id="features">
+        <div class="container flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row">
+            <!-- what's different -->
+            <div class="flex flex-col space-y-12 mx-14 md:w-1/2">
+                <h2 class="text-4xl font-bold md:text-left text-center max-w-md">
+                    What's different about CStube?
+                </h2>
+                <p class="max-w-sm text-center text-gray-700 md:text-left">
+                    CStube is a unique e-learning platform for the computer science student community. We provide you with the best playlists available on several CS topics/domains in an easy and reliable manner to keep you away from distraction so that you can focus more on learning and developing skills rather than your wasting time watching irrelevant stuffs.
+                </p>
+            </div>
+            <!-- numbered list -->
+            <div class="flex flex-col space-y-8 md:w-1/2">
+                <!-- list item 1 -->
+                <div class="flex flex-col space-y-1">
+                    <div class="rounded-l-full bg-red-200">
+                        <div class="flex space-x-2 items-center">
+                            <div class="px-4 py-2 text-white text-lg font-bold rounded-full bg-brightRed">01</div>
+                            <h3 class="text-base font-bold">Selected quality playlists</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 ml-8">
+                        CStube platform gives you access to the top quality playlists available on several CS topics/domains on the Youtube based on several parameters such as ratings, likes, views, etc.
+                    </p>
+                </div>
+                    <!-- list item 2 -->
+                <div class="flex flex-col space-y-1">
+                    <div class="rounded-l-full bg-red-200">
+                        <div class="flex space-x-2 items-center">
+                            <div class="px-4 py-2 text-white text-lg font-bold rounded-full bg-brightRed">02</div>
+                            <h3 class="text-base font-bold">Selected quality playlists</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 ml-8">
+                        CStube platform gives you access to the top quality playlists available on several CS topics/domains on the Youtube based on several parameters such as ratings, likes, views, etc.
+                    </p>
+                </div>
+
+                    <!-- list item 3 -->
+                <div class="flex flex-col space-y-1">
+                    <div class="rounded-l-full bg-red-200">
+                        <div class="flex space-x-2 items-center">
+                            <div class="px-4 py-2 text-white text-lg font-bold rounded-full bg-brightRed">03</div>
+                            <h3 class="text-base font-bold">Selected quality playlists</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 ml-8">
+                        CStube platform gives you access to the top quality playlists available on several CS topics/domains on the Youtube based on several parameters such as ratings, likes, views, etc.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our team section -->
+    <section id="team">
+        <div class="max-w-6xl m-auto mt-32 text-center px-5">
+            <h2 class="text-4xl text-center font-bold">
+                Meet our incredible team!
+            </h2>
+            <!-- each team member -->
+            <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
+                <!-- ankur -->
+                <div class="flex flex-col items-center space-y-6 p-6 rounded-lg bg-veryLightGray md:w-1/3">
+                    <img src="img/avatar-anisha.png" alt="" class="w-20 h-20 -mt-14">
+                    <h5 class="text-lg font-bold">Ankur</h5>
+                    <div class="flex flex-row items-center space-x-5">
+                    <img src="img/linkedin.svg" alt="">
+                    <img src="img/twitter.svg" alt="">
+                    <img src="img/insta.svg" alt="">
+                    </div>
+                </div>
+                <!-- snehel -->
+                <div class="flex-col items-center space-y-6 p-6 rounded-lg bg-veryLightGray md:flex md:w-1/3">
+                    <img src="img/avatar-richard.png" alt="" class="w-20 h-20 -mt-14">
+                    <h5 class="text-lg font-bold">Snehel</h5>
+                    <div class="flex flex-row items-center space-x-5">
+                    <img src="img/linkedin.svg" alt="">
+                    <img src="img/twitter.svg" alt="">
+                    <img src="img/insta.svg" alt="">
+                    </div>
+                </div>
+                <!-- vivek -->
+                <div class="flex-col items-center space-y-6 p-6 rounded-lg bg-veryLightGray md:flex md:w-1/3">
+                    <img src="img/avatar-shanai.png" alt="" class="w-20 h-20 -mt-14">
+                    <h5 class="text-lg font-bold">Vivek</h5>
+                    <div class="flex flex-row items-center space-x-5">
+                    <img src="img/linkedin.svg" alt="">
+                    <img src="img/twitter.svg" alt="">
+                    <img src="img/insta.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Call to action -->
+    <section id="cta" class="bg-brightRed">
+      <!-- Flex Container -->
+      <div class="container flex flex-col items-center justify-between px-6 py-12 mb-0 mx-auto my-12 space-y-12 md:py-8 md:flex-row md:space-y-0">
+        <!-- Heading -->
+        <h2 class="text-4xl font-bold text-center text-gray-900 md:text-4xl md:max-w-xl md:text-left">
+          Simplify your learning experience with CStube
+        </h2>
+        <!-- Button -->
+        <div>
+          <a href="#" class="w-8 h-2 p-3 px-6 pt-2 font-bold text-brightRed bg-gray-900 rounded-full shadow-2xl baseline hover:bg-white">Get Started</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-veryDarkBlue">
+        <div class="container flex flex-col-reverse justify-around space-x-32 mx-auto mt-0 px-6 py-10 space-y-8 md:flex-row md:space-y-0">
+            <!-- logo and social links -->
+            <div class="flex flex-col-reverse mt-2 items-center justify-between space-y-4 md:flex-col md:items-start md:space-y-0">
+                <div class="mx-auto my-6 text-center text-white md:hidden">
+                    Copyright &copy;CStube All rights reserved!
+                </div>
+                <div>  <img src="img/logo-white.svg" alt="" class="h-8"> </div>
+                <div class="flex justify-center space-x-4">
+                    <a href="#"><img src="img/twitterw.svg" alt=""></a>
+                    <a href="#"><img src="img/instaw.svg" alt=""></a>
+                    <a href="#"><img src="img/linkedinw.svg" alt=""></a>
+                    <a href="#"><img src="img/icon-facebook.svg" alt=""></a>
+                    <a href="#"><img src="img/pinterest.svg" alt=""></a>
+                </div>
+            </div>
+            <!-- list containers -->
+            <div class="flex justify-around space-x-32">
+                <div class="flex flex-col text-white font-bold space-y-3">
+                    <a href="#" class="hover:text-brightRed">Home</a>
+                    <a href="#" class="hover:text-brightRed">Features</a>
+                    <a href="#" class="hover:text-brightRed">Our team</a>
+                    <a href="#" class="hover:text-brightRed">Courses</a>
+                </div>
+                <div class="flex flex-col text-white font-bold space-y-3">
+                    <a href="#" class="hover:text-brightRed">Careers</a>
+                    <a href="#" class="hover:text-brightRed">About us?</a>
+                    <a href="#" class="hover:text-brightRed">Contact</a>
+                </div>
+            </div>
+            <!-- input  -->
+            <div class="flex flex-col justify-between">
+                <form>
+                    <div class="flex mx-auto space-x-3">
+                        <label class="text-white text-xl font-bold block" for="">Have Queries? Mail us: </label>
+                        <input type="text" class="flex-1 block px-4 rounded-lg focus:outline-zinc-800" placeholder="">
+                        <button class="px-6 py-2 bg-brightRed hover:bg-brightRedLight focus:outline-none text-white rounded-full">Send</button>
+                    </div>
+                </form>
+                <div class="text-lg text-center hidden text-white md:block">
+                    Copyright &copy;CStube All rights reserved!
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
