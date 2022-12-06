@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
-
+import { AiOutlineUser } from "react-icons/ai";
 import { logo } from "../utils/constants";
 import { SearchBar } from "./";
 
@@ -18,7 +18,9 @@ const Navbar = () => ( <Stack direction = "row"
     alt = "logo"
     height = { 45 }/> 
     </Link > 
+    
     <SearchBar/>
+    <AiOutlineUser size={"30px"} style={{color:"orange", marginLeft:0}}/>
     </Stack>
 );
 
